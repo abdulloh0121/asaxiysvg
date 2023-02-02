@@ -14,6 +14,10 @@
 .hamburger{
   display: none;
   position: absolute;
+  z-index: 1000;
+}
+.hamburgers{
+  z-index: 1000;
 }
 .navbar {
   display: flex;
@@ -38,8 +42,8 @@
     outline: none;
     padding: 5px 15px 5px 15px;
     border-radius: 12px;
-    z-index: 1000;
     font-size: 22px;
+    z-index: 10;
   }
   &__button {
     display: flex;
@@ -49,7 +53,6 @@
     margin-left: -10px;
     gap: 4px;
     background: #008dff;
-    transition: 0.2s;
     padding: 12px 15px 12.8px 25px;
     font-size: 16px;
     color: #ffffff;
@@ -67,8 +70,7 @@
     align-items: center;
     text-decoration: none;
     color: black;
-    font-size: 17px;
-    transition: 0.2s;
+    font-size: 15px;
     &:hover{
       color: #008dff;
     }
@@ -83,7 +85,6 @@
     text-decoration: none;
     font-size: 20px;
     color: black;
-    transition: 0.3s;
     &:hover{
       color: #008dff;
     }
@@ -97,13 +98,13 @@
   position: absolute;
   background: #ffffff;
   padding: 25px;
-  z-index: 11111;
+  z-index: 111;
   &__card{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 8%;
+    justify-content: flex-end;
+    margin-bottom: 10%;
   }
   &__href{
     display: flex;
@@ -112,8 +113,7 @@
     text-decoration: none;
     color: black;
     font-size: 22px;
-    margin-bottom: 4%;
-    transition:0.2s ;
+    margin-bottom: 4.5%;
     &:hover{
       color: #008dff;
     }
@@ -154,6 +154,7 @@
       display: flex;
       align-items: flex-end;
       flex-direction: column;
+      margin-bottom: 15px;
       gap: 30px;
       width: 100%;
     }
@@ -165,8 +166,20 @@
     }
 
   }
+  .hambur{
+    width: 60%;
+  }
 
 }
+@media only screen and (max-width:600px){
+.hambur{
+  width: 80%;
+  &__href{
+    font-size: 18px;
+  }
+}
+}
+
 
 
 .hamburger.menu-open .line3 {
