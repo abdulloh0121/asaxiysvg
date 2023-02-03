@@ -1,4 +1,4 @@
-import "./header.scss";
+import "./scss/header.scss";
 import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
 
@@ -78,9 +78,7 @@ function Header() {
           </a>
           <input className="hambur__input" type="text" placeholder="o'zbek" />
           <div className="hambur__icon">
-            <a href="/">
-              <img src="" alt="instagiram" />
-            </a>
+            <a href="/"></a>
             <a href="/">
               <img src="" alt="teligiram" />
             </a>
@@ -96,8 +94,8 @@ function Header() {
             <div className="navbar__cart">
               <a href="#">
                 <img
-                  src="https://asaxiy.uz/custom-assets/images/logos/asaxiy-logo.svg"
-                  alt=""
+                  src="	https://asaxiy.uz/custom-assets/images/logos/asaxiy-logo.svg"
+                  alt="loga"
                 />
               </a>
               <form className="navbar__form" action="/">
@@ -205,7 +203,6 @@ function Header() {
             sport buyimlari
           </a>
         </nav>
-      
       </div>
     </div>
   );

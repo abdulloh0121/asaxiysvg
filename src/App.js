@@ -1,4 +1,4 @@
-import Header from "./components/Header"
+import Header from "./components/header"
 import Home from "./components/home"
 import Appstor from "./components/appstor"
 import Footer from "./components/footer"

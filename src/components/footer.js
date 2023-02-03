@@ -1,4 +1,4 @@
-import "./footer.scss";
+import "./scss/footer.scss";
 
 function Footer() {
   return (
@@ -69,19 +69,19 @@ function Footer() {
 
             <div className="footer__textCard">
                 <h3 className="footer__textInfo">malumotlar</h3>
-                <a href="#" className="footer__texts">Lorem ipsum dolor sit.</a><br /><p></p>
-                <a href="#" className="footer__texts">Lorem ipsum dolor sit.</a><br /><p></p>
-                <a href="#" className="footer__texts">Lorem ipsum dolor sit.</a><br /><p></p>
-                <a href="#" className="footer__texts">Lorem ipsum dolor sit.</a><br /><p></p>
-                <a href="#" className="footer__texts">Lorem ipsum dolor sit.</a><br /><p></p>
-                <a href="#" className="footer__texts">Lorem ipsum dolor sit.</a><br /><p></p>
-                <a href="#" className="footer__texts">Lorem ipsum dolor sit.</a>
+                <a href="#" className="footer__texts">Muddatli toʻlov shartlari</a><br /><p></p>
+                <a href="#" className="footer__texts">Muddatli toʻlov asosida sotib olishning umumiy qoidalari.</a><br /><p></p>
+                <a href="#" className="footer__texts">Buyurtma qanday beriladi?</a><br /><p></p>
+                <a href="#" className="footer__texts">Ommaviy oferta (Foydalanuvchi bitimi)</a><br /><p></p>
+                <a href="#" className="footer__texts">Tovarlarni yetkazib berish va toʻlov turlari.</a><br /><p></p>
+                <a href="#" className="footer__texts">Buyurtmani bekor qilish va tovarni qaytarish</a><br /><p></p>
+                <a href="#" className="footer__texts">Biz haqimizda</a>
             </div>
             <div className="footer__textCard">
                 <h3 className="footer__textInfo">malumotlar</h3>
-                <a href="#" className="footer__texts">Lorem ipsum dolor sit.</a><br /><p></p>
-                <a href="#" className="footer__texts">Lorem ipsum dolor sit.</a><br /><p></p>
-                <a href="#" className="footer__texts">Lorem ipsum dolor sit.</a><br /><p></p>
+                <a href="#" className="footer__texts"> <img src="https://asaxiy.uz/custom-assets/images/phone.svg" alt="/" /> +998 90 323 68 06</a><br /><p></p>
+                <a href="#" className="footer__texts"> <img src="https://asaxiy.uz/custom-assets/images/mail.svg" alt="/" /> Lorem ipsum dolor sit.</a><br /><p></p>
+                <a href="#" className="footer__texts"><img src="	https://asaxiy.uz/custom-assets/images/location.svg" alt="/" /> Chilonzor 3, ToshkentChilonzor 3, Toshkent</a><br /><p></p>
             </div>
             <div className="footer__textCard">
                 <h3 className="footer__textInfo">malumotlar</h3>

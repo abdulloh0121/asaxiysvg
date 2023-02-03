@@ -1,4 +1,4 @@
-import "./appstor.scss"
+import "./scss/appstor.scss"
 
 function Appstor(){
     return(
