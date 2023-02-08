@@ -14,7 +14,7 @@
 }
 .hamburger {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 1000;
 }
 .hamburgers {
@@ -79,9 +79,17 @@
 }
 .navtext {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 18px 0px 18px 0px;
+
+  width: 100%;
+  height: 100vh;
+
+  padding: 30px;
+  position: absolute;
+  background: #ffffff;
+
+  z-index: 20;
   &__text {
     text-decoration: none;
     font-size: 20px;
@@ -96,7 +104,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   background: #ffffff;
   padding: 25px;
   z-index: 111;

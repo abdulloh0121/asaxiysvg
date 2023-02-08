@@ -18,11 +18,13 @@ function Home() {
       <Swiper
         slidesPerView={8}
         autoplay={{
-          delay: 2500
+          delay: 2500,  
+          disableOnInteraction:false
         }}
         spaceBetween={40}
         modules={[FreeMode, Pagination, Autoplay]}
         className="mySwiper contaner"
+
       >
         <div className="boxss">
         <SwiperSlide>

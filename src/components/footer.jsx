@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className="body">
       <div className="contaner footer">
-        <div className="footer__card">
+        <div className="footer__card ">
           <a className="footer__href" href="">
             <div className="footer__item">
               <img
@@ -67,6 +67,7 @@ function Footer() {
         </div>
         <div className="footer__info">
 
+
             <div className="footer__textCard">
                 <h3 className="footer__textInfo">malumotlar</h3>
                 <a href="#" className="footer__texts">Muddatli toʻlov shartlari</a><br /><p></p>
@@ -77,14 +78,14 @@ function Footer() {
                 <a href="#" className="footer__texts">Buyurtmani bekor qilish va tovarni qaytarish</a><br /><p></p>
                 <a href="#" className="footer__texts">Biz haqimizda</a>
             </div>
-            <div className="footer__textCard">
-                <h3 className="footer__textInfo">malumotlar</h3>
+            <div className="footer__textCardName">
+                <h3 className="footer__textInfo">biz bilan aloqa</h3>
                 <a href="#" className="footer__texts"> <img src="https://asaxiy.uz/custom-assets/images/phone.svg" alt="/" /> +998 90 323 68 06</a><br /><p></p>
                 <a href="#" className="footer__texts"> <img src="https://asaxiy.uz/custom-assets/images/mail.svg" alt="/" /> Lorem ipsum dolor sit.</a><br /><p></p>
-                <a href="#" className="footer__texts"><img src="	https://asaxiy.uz/custom-assets/images/location.svg" alt="/" /> Chilonzor 3, ToshkentChilonzor 3, Toshkent</a><br /><p></p>
+                <a href="#" className="footer__texts"><img src="	https://asaxiy.uz/custom-assets/images/location.svg" alt="/" /> Chilonzor 3, ToshkentChilonzor 3,</a><br /><p></p>
             </div>
-            <div className="footer__textCard">
-                <h3 className="footer__textInfo">malumotlar</h3>
+            <div className="footer__textCardWeb">
+                <h3 className="footer__textInfo">bizni ishtimoviy tarmoqlar</h3>
                 <a href="#" className="footer__texts">Lorem ipsum dolor sit.</a><br /><p></p>
             </div>
 

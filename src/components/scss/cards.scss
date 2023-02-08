@@ -1,0 +1,118 @@
+.cardBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    width: 100%;
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        border-radius: 14px;
+        background: #FFFFFF;
+        padding: 14px;
+        height: 100%;
+
+    }
+    &__action{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        right: 25px;
+        z-index: 10px;
+    }
+    &__chegirma{
+        font-size: 16px;
+        height: 27px;
+        color:#FFFFFF;
+        background: #ffc107;
+        border-radius: 8px;
+        padding: 0px 7px 0px 7px;
+    }
+    &__love{
+        display: flex;
+        flex-direction: column;
+    }
+    &__imgs{
+        border-radius: 10px;
+    }
+    &__texts{
+        display: flex;
+        flex-direction: column;
+    }
+    &__href{
+        text-decoration: none;
+        width: 300px;
+        height: 440px;
+        margin-bottom: 15px;
+    }
+    &__name{
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+        margin-bottom: 1%;
+        &:hover{
+            color: #008dff;
+        }
+    }
+    &__price{
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+        margin-bottom: 5%;
+        &:hover{
+            color: #008dff;
+        }
+    }
+    &__button{
+        width: 100%;
+        background: #008dff;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #FFFFFF;
+        border: none;
+        padding: 8px;
+        &:hover{
+            // transform: translateX(100%);
+            // background: #ffc107;
+            opacity: 0.8;
+            background-color: rgb(6, 10, 249);
+        }
+    }
+}
+
+
+@media only screen and (max-width: 630px) {
+   .cardBox{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &__href{
+        width: 40%;
+        height: 360px;
+    }
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+    }
+    &__imgs{
+        width: 100%;
+        height: 160px;
+    }
+    &__name{
+        font-size: 17px;
+    }
+    &__price{
+        font-size: 17px;
+    }
+    &__button{
+        font-size: 16px;
+    }
+   }
+}

@@ -1,16 +1,27 @@
 import "./scss/header.scss";
 import { Squash as Hamburger } from "hamburger-react";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import {Link} from 'react-router-dom'
+import { ShopContext } from "./ShopContext";
 
 function Header() {
   const [showModall, setShovModal] = useState(false);
-
+  const [showModalls, setShovModals] = useState(true);
+  const [catigory, setCatigory] = useState([]);
+  const  {counter} = useContext(ShopContext)
   const toggles = () => {
     setShovModal(!showModall);
   };
-  // const toggle = (e)=>{
+  const toggle = () => {
+    setShovModals(!showModalls);
+  };
+    fetch("https://dummyjson.com/products/categories")
+      .then((res) => res.json())
+      .then((json) => {
+        setCatigory(json)
+      });
 
-  // }
+
   return (
     <div className="box">
       {/* hamburger */}
@@ -47,7 +58,7 @@ function Header() {
               src="https://asaxiy.uz/custom-assets/images/icons/header/heart.svg"
               alt="/"
             />
-            <span>sevimlilar</span>
+            <span>sevimlilar </span>
           </a>
           <a className="hambur__href" href="">
             <img
@@ -159,7 +170,7 @@ function Header() {
                 src=" https://asaxiy.uz/custom-assets/images/icons/header/heart.svg"
                 alt=""
               />
-              <span>sevimlilar</span>
+              <span>sevimlilar{counter}</span>
             </a>
             <a className="navbar__href" href="">
               <img
@@ -174,35 +185,17 @@ function Header() {
         </div>
       </div>
       <div className="contaner">
-        <nav className="navtext">
-          <div className="hamburgers">
-            <Hamburger onToggle={toggles} color="#008dff" />
+        <Hamburger onToggle={toggle} color="#008dff" />
+
+        {!showModalls && (
+          <div className="navtext">
+            {catigory.map((catigory,i) => (
+              <Link key={i} to={`/${catigory}`}>
+                {catigory}
+              </Link>
+            ))}
           </div>
-          <a className="navtext__text" href="">
-            barcha bo'limlar
-          </a>
-          <a className="navtext__text" href="">
-            yangiliklar
-          </a>
-          <a className="navtext__text" href="">
-            yangi kelganlar
-          </a>
-          <a className="navtext__text" href="">
-            chegirmalar
-          </a>
-          <a className="navtext__text" href="">
-            kitoblar
-          </a>
-          <a className="navtext__text" href="">
-            telifon va gadjetler
-          </a>
-          <a className="navtext__text" href="">
-            telivizorlar
-          </a>
-          <a className="navtext__text" href="">
-            sport buyimlari
-          </a>
-        </nav>
+        )}
       </div>
     </div>
   );
