@@ -1,7 +1,11 @@
-import React, { useEffect, useState } from "react";
+
+import "./scss/singlepage.scss"
+import React, { useEffect, useState,useContext } from "react";
 import { useParams } from "react-router-dom";
+import { ShopContext } from "./ShopContext";
 
 export const Singlepage = () => {
+  const {increaseCounter} = useContext(ShopContext)
   const [products, setProducts] = useState([]);
   const [loding, setLoading] = useState(false);
   const { id } = useParams();
@@ -25,19 +29,19 @@ export const Singlepage = () => {
 
   return (
     <div className="cardBox contaner">
-      <a href="/" onClick={() => Singlepage("all")}>hamasi</a>
+      <a className="all" href="/" onClick={() => Singlepage("all")}>barchasi</a>
       {products.map((product) => (
         // <li>{product.title}</li>
-        <a href="" className="cardBox__href">
+        <div className="cardBox__href">
           <div className="cardBox__cards">
             <div className="cardBox__action">
               <div className="cardBox__love">
-                <a href="/">
+                <div >
                   <i className="fa-solid fa-cart-arrow-down"></i>
-                </a>
-                <a href="/">
+                </div>
+                <div onClick={()=> increaseCounter(product.id)}>
                   <i className="fa-regular fa-heart"></i>
-                </a>
+                </div>
               </div>
             </div>
             <div className="cardBox__img">
@@ -57,7 +61,7 @@ export const Singlepage = () => {
               <button className="cardBox__button">bir klikda olish</button>
             </div>
           </div>
-        </a>
+        </div>
       ))}
     </div>
   );

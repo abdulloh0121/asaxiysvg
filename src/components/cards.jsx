@@ -1,17 +1,17 @@
-import "./scss/cards.scss";
+import "./scss/_cards.scss";
 import Footbol from "../assets/fotball.jpeg";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react"; 
 import { ShopContext } from "./ShopContext";
 
 function Card(e) {
 
   const [data, setData] = useState([]);
-  const {setCounter} = useContext(ShopContext)
+  const {increaseCounter} = useContext(ShopContext)
 
-  const increaseShopCounter =()=>{
-    setCounter((prev)=> prev+1)
+  // const increaseShopCounter =()=>{
+  //   increaseCounter((prev)=> prev+1)
 
-  }
+  // }
   useEffect(() => {
     fetch("https://dummyjson.com/products")
       .then((res) => res.json())
@@ -32,7 +32,7 @@ function Card(e) {
                   <a  href="/">
                     <i className="fa-solid fa-cart-arrow-down"></i>
                   </a>
-                  <div onClick={increaseShopCounter}  href="/">
+                  <div onClick={()=> increaseCounter(item)} >
                     <i className="fa-regular fa-heart"></i>
                   </div>
                 </div>
@@ -50,7 +50,7 @@ function Card(e) {
               <div className="cardBox__texts">
                 <strong className="cardBox__name">{item.title}</strong>
                 <strong className="cardBox__name">{item.rating}</strong>
-                <p className="cardBox__price">{item.price} 000 so'm</p>
+                <p className="cardBox__price">{item.price} $ dollar</p>
                 <button className="cardBox__button">bir klikda olish</button>
               </div>
             </div>

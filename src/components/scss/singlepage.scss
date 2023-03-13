@@ -1,0 +1,17 @@
+.all{
+    position: absolute;
+    z-index: 10;
+    left: 150px;
+    top: 98px;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    &:hover{
+        color: #008dff;
+    }
+}
+@media only screen and (max-width: 1080px){
+    .all{
+        top: 170px;
+    }
+}

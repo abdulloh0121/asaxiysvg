@@ -1,26 +1,25 @@
-import "./scss/header.scss";
+import "./scss/_header.scss";
 import { Squash as Hamburger } from "hamburger-react";
 import { useContext, useEffect, useState } from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { ShopContext } from "./ShopContext";
 
 function Header() {
   const [showModall, setShovModal] = useState(false);
   const [showModalls, setShovModals] = useState(true);
   const [catigory, setCatigory] = useState([]);
-  const  {counter} = useContext(ShopContext)
+  const { counter } = useContext(ShopContext);
   const toggles = () => {
     setShovModal(!showModall);
   };
   const toggle = () => {
     setShovModals(!showModalls);
   };
-    fetch("https://dummyjson.com/products/categories")
-      .then((res) => res.json())
-      .then((json) => {
-        setCatigory(json)
-      });
-
+  fetch("https://dummyjson.com/products/categories")
+    .then((res) => res.json())
+    .then((json) => {
+      setCatigory(json);
+    });
 
   return (
     <div className="box">
@@ -101,6 +100,7 @@ function Header() {
           <nav className="navbar">
             <div className="hamburger">
               <Hamburger onToggle={toggles} color="#008dff" />
+              
             </div>
             <div className="navbar__cart">
               <a href="#">
@@ -189,11 +189,15 @@ function Header() {
 
         {!showModalls && (
           <div className="navtext">
-            {catigory.map((catigory,i) => (
-              <Link key={i} to={`/${catigory}`}>
-                {catigory}
-              </Link>
-            ))}
+            <div className=" contaner">
+              <div className="navtext__card">
+                {catigory.map((catigory, i) => (
+                  <Link className="navtext__text" key={i} to={`/${catigory}`}>
+                  💻{catigory} , 
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         )}
       </div>
